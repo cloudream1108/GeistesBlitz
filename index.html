@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>閃靈快手</title>
+  <link rel="icon" href="images/ghost/ghost_white.png">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="game-container">
+    <div class="left">
+      閃靈快手
+      <br>
+      <button id="btn" onclick="changeImage()"> 換圖片 </button>
+      <img id="ghost_w" src="images/ghost/ghost_white.png">
+      <!-- 圖片來源：https://www.flaticon.com/ -->
+      <div id="score">分數</div>
+      <br>
+      卡片張數
+      <input type="number" class="card" id="cardInput"></input>
+      <button class="card" id="submit" onclick="cardNumber()">submit</button>
+
+      <div id="rule">
+        <br><br>
+        Rules（先簡單寫一下） <br>
+        <ul>
+          <li> if(有正常的) 抓正常的那個 </li>
+          <li> else 抓沒出現的(顏色+物品) </li>
+          <li> 可選擇不同模式（電腦速度） </li>
+          <li> 可選擇卡片總張數（？ </li>
+        </ul>
+
+        還沒寫的
+        <ul>
+          <li>x</li>
+          <li>判定正確答案</li>
+          <li>放玩家面前的五個物品（正常顏色）</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="right">
+
+      <div id="card-container"></div>
+
+      <div id="item-container">
+        <img class="item" id="book" src="images/book/book_blue.png" onclick="checkAns(1)">
+        <img class="item" id="bottle" src="images/bottle/bottle_green.png" onclick="checkAns(2)">
+        <img class="item" id="ghost" src="images/ghost/ghost_white.png" onclick="checkAns(3)">
+        <img class="item" id="mouse" src="images/mouse/mouse_grey.png" onclick="checkAns(4)">
+        <img class="item" id="sofa" src="images/sofa/sofa_red.png" onclick="checkAns(5)">
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
