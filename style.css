@@ -304,12 +304,14 @@ body {
     /* 首頁start按鈕 */
     top: 65%;
     left: 50%;
+    text-align: center;
   }
 
   #rulesBtn-menu {
     /* 首頁rules按鈕 */
-    top: 80%;
+    top: 75%;
     left: 50%;
+    text-align: center;
   }
 
   #rulesTitle {
@@ -353,6 +355,7 @@ body {
     top: 11%;
     left: 10%;
     font-size: 3vw;
+    text-align: center;
   }
 
   #menuBtn-rule {
@@ -360,6 +363,7 @@ body {
     top: 5%;
     left: 10%;
     font-size: 2.7vw;
+    text-align: center;
   }
 
   #cardNum {
@@ -367,6 +371,7 @@ body {
     top: 10%;
     left: 30%;
     font-size: 5vw;
+    text-align: center;
   }
 
   #cardInput {
@@ -376,6 +381,7 @@ body {
     font-size: 4vw;
     width: 25%;
     height: 4%;
+    text-align: center;
   }
 
   #submit {
@@ -387,6 +393,7 @@ body {
     width: 16%;
     height: 4.5%;
     border-radius: 1.5vw;
+    text-align: center;
   }
 
   .gameBtn {
@@ -400,6 +407,7 @@ body {
     top: 5%;
     left: 10%;
     font-size: 2.7vw;
+    text-align: center;
   }
 
   #ruleBtn-game {
@@ -407,6 +415,7 @@ body {
     top: 11%;
     left: 10%;
     font-size: 3vw;
+    text-align: center;
   }
 
   #ans {
