@@ -296,4 +296,7 @@ body {
     font-size: 20vw;
     font-family: 'Protest Revolution';
   }
+  #ghost_w {
+    display: none;
+  }
 }
