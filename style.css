@@ -278,7 +278,7 @@ body {
 }
 
 /*響應式設計語法*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .backgroundImg {
     background-image: url(picture/castlePhone.jpg);
   }
@@ -308,7 +308,7 @@ body {
 
   #rulesBtn-menu {
     /* 首頁rules按鈕 */
-    top: 75%;
+    top: 80%;
     left: 50%;
   }
 
