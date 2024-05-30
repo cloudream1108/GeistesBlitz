@@ -1,3 +1,15 @@
+@font-face {
+  font-family: 'Protest Revolution';
+  src: url('font/ProtestRevolution-Regular.woff') format("woff");
+  /* https://fonts.google.com/specimen/Protest+Revolution?preview.text=GeistesBlitz */
+}
+
+@font-face {
+  font-family: 'New_Tegomin';
+  src: url('font/NewTegomin-Regular.woff') format("woff");
+  /* https://fonts.google.com/specimen/New+Tegomin?subset=japanese&noto.script=Hira */
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -12,18 +24,6 @@ body {
   display: flex;
 }
 
-@font-face {
-  font-family: 'Protest Revolution';
-  src: url('font/ProtestRevolution-Regular.woff') format("woff");
-  /* https://fonts.google.com/specimen/Protest+Revolution?preview.text=GeistesBlitz */
-}
-
-@font-face {
-  font-family: 'New_Tegomin';
-  src: url('font/NewTegomin-Regular.woff') format("woff");
-  /* https://fonts.google.com/specimen/New+Tegomin?subset=japanese&noto.script=Hira */
-}
-
 #title {
   position: absolute;
   top: 25%;
@@ -36,7 +36,6 @@ body {
 
 #ghost_w {
   width: 8%;
-  /*height: 8%;*/
   opacity: 80%;
 
   position: absolute;
@@ -131,6 +130,24 @@ body {
   left: 8%;
   transform: translate(-50%, -50%);
   font-size: 1.2vw;
+}
+
+#item-container-rule {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  position: fixed;
+  top: 70%;
+  left: 25%;
+}
+
+#item-container-rule img {
+  width: 10vw;
+  height: 10vw;
+  /*max-width: 150px;
+  max-height: 150px;*/
+  opacity: 80%;
 }
 
 #cardNum {
@@ -239,10 +256,8 @@ body {
 }
 
 #card-container img {
-  max-width: 20vw;
-  max-height: 20vw;
-  /*max-width: 200px;
-  max-height: 200px;*/
+  width: 20vw;
+  height: 20vw;
   opacity: 90%;
 }
 
@@ -257,34 +272,10 @@ body {
 }
 
 #item-container img {
-  max-width: 10vw;
-  max-height: 10vw;
-  /*max-width: 150px;
-  max-height: 150px;*/
-  opacity: 80%;
-}
-
-#item-container-rule {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 10px;
-  position: fixed;
-  top: 70%;
-  left: 25%;
-}
-
-#item-container-rule img {
   width: 10vw;
   height: 10vw;
-  /*max-width: 150px;
-  max-height: 150px;*/
   opacity: 80%;
 }
-
-/*.menu {
-  display: none;
-}*/
 
 /*響應式設計語法*/
 @media screen and (max-width: 768px) {
@@ -333,23 +324,6 @@ body {
     padding: 10px;
   }
 
-  .ruleBtn {
-    display: none;
-  }
-
-  /*.menu {
-    display: block;
-    background-color: transparent;
-    color: white;
-    font-size: 30px;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 5vw;
-    left: 5vw;
-    border: none;
-    cursor: pointer;
-  }*/
-
   #item-container-rule {
     width: 90%;
     display: flex;
@@ -366,87 +340,72 @@ body {
     height: 17%;
   }
 
-  #startBtn-rule {
-    /* 規則頁start按鈕 */
-    position: absolute;
-    top: 23%;
-    left: 8%;
-    transform: translate(-50%, -50%);
-    font-size: 1.56vw;
-  }
-
-  #menuBtn-rule {
-    /* 規則頁homepage按鈕 */
-    position: absolute;
-    top: 13%;
-    left: 8%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2vw;
-  }
-
-  #cardNum {
-    /* 「回合數」 */
-    position: absolute;
-    top: 7.5%;
-    left: 8.5%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5vw;
-    font-family: 'New_Tegomin';
-    text-align: center;
-  }
-
-  #cardInput {
-    /* 輸入框 */
-    position: absolute;
-    top: 7.5%;
-    left: 15.5%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2vw;
-    border-radius: 0.8vw;
-    font-family: 'New_Tegomin';
-    text-align: center;
-  }
-
-  #submit {
-    /* submit按鈕 */
-    position: absolute;
-    top: 7.5%;
-    left: 23%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2vw;
-    border-radius: 0.8vw;
-    font-family: 'Protest Revolution';
-    text-align: center;
-    color: grey;
-  }
-
-  .gameBtn {
-    /* 遊戲頁按鈕 */
-    width: 7vw;
-    height: 3.9vw;
-    border-radius: 1.56vw;
-    font-family: 'Protest Revolution';
-    color: grey;
+  .ruleBtn {
+    /* 規則頁按鈕 */
+    width: 15vw;
+    height: 7vw;
     text-align: center;
     opacity: 55%;
   }
 
+  #startBtn-rule {
+    /* 規則頁start按鈕 */
+    top: 11%;
+    left: 10%;
+    font-size: 3vw;
+  }
+
+  #menuBtn-rule {
+    /* 規則頁homepage按鈕 */
+    top: 5%;
+    left: 10%;
+    font-size: 2.7vw;
+  }
+
+  #cardNum {
+    /* 「回合數」 */
+    top: 10%;
+    left: 30%;
+    font-size: 5vw;
+  }
+
+  #cardInput {
+    /* 輸入框 */
+    top: 10%;
+    left: 55%;
+    font-size: 4vw;
+    width: 25%;
+    height: 4%;
+  }
+
+  #submit {
+    /* submit按鈕 */
+    top: 10%;
+    left: 80%;
+    font-size: 4vw;
+    width: 16%;
+    height: 4.5%;
+    border-radius: 1.5vw;
+  }
+
+  .gameBtn {
+    /* 遊戲頁按鈕 */
+    width: 15vw;
+    height: 7vw;
+  }
+
   #menuBtn-game {
     /* 遊戲頁homepage按鈕 */
-    position: absolute;
-    top: 18%;
+    top: 5%;
     left: 10%;
-    transform: translate(-50%, -50%);
-    font-size: 1.2vw;
+    font-size: 2.7vw;
   }
 
   #ruleBtn-game {
     /* 遊戲頁rule按鈕 */
-    position: absolute;
-    top: 27%;
+    top: 11%;
     left: 10%;
-    transform: translate(-50%, -50%);
-    font-size: 1.56vw;
+    font-size: 3vw;
   }
 
   #ans {
@@ -454,64 +413,61 @@ body {
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.8vw;
+    font-size: 5vw;
     font-family: 'New_Tegomin';
     text-align: center;
+    width: 90%;
   }
 
   #score {
-    position: absolute;
-    top: 9%;
-    left: 87%;
-    transform: translate(-50%, -50%);
-    font-size: 1.8vw;
-    font-family: 'Protest Revolution';
-    text-align: center;
+    top: 90%;
+    left: 80%;
+    font-size: 5vw;
+    width: 50%;
   }
 
   .item {
     position: relative;
-    height: 10vw;
+    height: 15vw;
   }
 
   .card {
-    height: 2vw;
-    width: 6vw;
+    height: 6vw;
+    width: 18vw;
   }
 
   #card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
-    position: fixed;
-    top: 15%;
-    left: 30%;
+    gap: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    width: 90%;
   }
 
   #card-container img {
-    max-width: 20vw;
-    max-height: 20vw;
-    /*max-width: 200px;
-    max-height: 200px;*/
+    width: 35vw;
+    height: 35vw;
     opacity: 90%;
   }
 
   #item-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 10px;
-    position: fixed;
-    top: 55%;
-    left: 25%;
+    justify-content: center;
+    gap: 15px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 65%;
+    left: 55%;
+    width: 90%;
   }
 
   #item-container img {
-    max-width: 10vw;
-    max-height: 10vw;
-    /*max-width: 150px;
-    max-height: 150px;*/
+    width: 15vw;
+    height: 15vw;
     opacity: 80%;
   }
 }

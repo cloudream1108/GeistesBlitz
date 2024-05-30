@@ -29,9 +29,6 @@ function cardNumber() {
   right = 0, wrong = 0;
 
   card = Number(cardInput.value);
-  // typeof cardInput.value = string
-  // console.log(typeof card);      number
-  // console.log(typeof cardNum);   number
 
   showImg("item-container");
   changeImage();
@@ -100,7 +97,7 @@ function changeMode(mode) {
     // hard
     case 'h':
       break;
-    // hell 挑戰人類極限(x
+    // hell
     case 'hell':
       break;
   }
