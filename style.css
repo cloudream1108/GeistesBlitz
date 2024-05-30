@@ -344,7 +344,7 @@ body {
 
   .ruleBtn {
     /* 規則頁按鈕 */
-    width: 15vw;
+    width: 17vw;
     height: 7vw;
     text-align: center;
     opacity: 55%;
@@ -390,7 +390,7 @@ body {
     left: 80%;
     font-size: 4vw;
     line-height: 4.5%;
-    width: 16%;
+    width: 17%;
     height: 4.5%;
     border-radius: 1.5vw;
     text-align: center;
@@ -398,7 +398,7 @@ body {
 
   .gameBtn {
     /* 遊戲頁按鈕 */
-    width: 15vw;
+    width: 17vw;
     height: 7vw;
   }
 
