@@ -278,7 +278,7 @@ body {
 }
 
 /*響應式設計語法*/
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
   .backgroundImg {
     background-image: url(picture/castlePhone.jpg);
   }
