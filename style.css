@@ -264,7 +264,7 @@ body {
   opacity: 80%;
 }
 
-#item-container2 {
+#item-container-rule {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -274,13 +274,17 @@ body {
   left: 25%;
 }
 
-#item-container2 img {
-  max-width: 10vw;
-  max-height: 10vw;
+#item-container-rule img {
+  width: 10vw;
+  height: 10vw;
   /*max-width: 150px;
   max-height: 150px;*/
   opacity: 80%;
 }
+
+/*.menu {
+  display: none;
+}*/
 
 /*響應式設計語法*/
 @media screen and (max-width: 768px) {
@@ -299,21 +303,215 @@ body {
 
   .menuBtn {
     /* 首頁按鈕 */
-    width: 20vw;
-    height: 8vw;
+    width: 30vw;
+    height: 10vw;
     border-radius: 2vw;
-    font-size: 5vw;
+    font-size: 6vw;
   }
 
   #startBtn-menu {
     /* 首頁start按鈕 */
-    top: 70%;
-    left: 70%;
+    top: 65%;
+    left: 50%;
   }
 
   #rulesBtn-menu {
     /* 首頁rules按鈕 */
-    top: 70%;
+    top: 75%;
+    left: 50%;
+  }
+
+  #rulesTitle {
+    font-size: 17vw;
+  }
+
+  #rulesContent {
+    position: absolute;
+    top: 25%;
+    font-size: 4vw;
+    width: 75%;
+    padding: 10px;
+  }
+
+  .ruleBtn {
+    display: none;
+  }
+
+  /*.menu {
+    display: block;
+    background-color: transparent;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 5vw;
+    left: 5vw;
+    border: none;
+    cursor: pointer;
+  }*/
+
+  #item-container-rule {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 75%;
+    left: 50%;
+  }
+
+  #item-container-rule img {
+    width: 17%;
+    height: 17%;
+  }
+
+  #startBtn-rule {
+    /* 規則頁start按鈕 */
+    position: absolute;
+    top: 23%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+    font-size: 1.56vw;
+  }
+
+  #menuBtn-rule {
+    /* 規則頁homepage按鈕 */
+    position: absolute;
+    top: 13%;
+    left: 8%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2vw;
+  }
+
+  #cardNum {
+    /* 「回合數」 */
+    position: absolute;
+    top: 7.5%;
+    left: 8.5%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5vw;
+    font-family: 'New_Tegomin';
+    text-align: center;
+  }
+
+  #cardInput {
+    /* 輸入框 */
+    position: absolute;
+    top: 7.5%;
+    left: 15.5%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2vw;
+    border-radius: 0.8vw;
+    font-family: 'New_Tegomin';
+    text-align: center;
+  }
+
+  #submit {
+    /* submit按鈕 */
+    position: absolute;
+    top: 7.5%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2vw;
+    border-radius: 0.8vw;
+    font-family: 'Protest Revolution';
+    text-align: center;
+    color: grey;
+  }
+
+  .gameBtn {
+    /* 遊戲頁按鈕 */
+    width: 7vw;
+    height: 3.9vw;
+    border-radius: 1.56vw;
+    font-family: 'Protest Revolution';
+    color: grey;
+    text-align: center;
+    opacity: 55%;
+  }
+
+  #menuBtn-game {
+    /* 遊戲頁homepage按鈕 */
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2vw;
+  }
+
+  #ruleBtn-game {
+    /* 遊戲頁rule按鈕 */
+    position: absolute;
+    top: 27%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    font-size: 1.56vw;
+  }
+
+  #ans {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8vw;
+    font-family: 'New_Tegomin';
+    text-align: center;
+  }
+
+  #score {
+    position: absolute;
+    top: 9%;
+    left: 87%;
+    transform: translate(-50%, -50%);
+    font-size: 1.8vw;
+    font-family: 'Protest Revolution';
+    text-align: center;
+  }
+
+  .item {
+    position: relative;
+    height: 10vw;
+  }
+
+  .card {
+    height: 2vw;
+    width: 6vw;
+  }
+
+  #card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    position: fixed;
+    top: 15%;
     left: 30%;
+  }
+
+  #card-container img {
+    max-width: 20vw;
+    max-height: 20vw;
+    /*max-width: 200px;
+    max-height: 200px;*/
+    opacity: 90%;
+  }
+
+  #item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 10px;
+    position: fixed;
+    top: 55%;
+    left: 25%;
+  }
+
+  #item-container img {
+    max-width: 10vw;
+    max-height: 10vw;
+    /*max-width: 150px;
+    max-height: 150px;*/
+    opacity: 80%;
   }
 }
