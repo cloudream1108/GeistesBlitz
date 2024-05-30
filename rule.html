@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>閃靈快手</title>
+  <link rel="icon" href="images/ghost/ghost_white.png">
+  <!-- 上方的圖標 -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="backgroundImg">
+  <div class="game-container">
+    <br>
+
+    <button onclick="self.location.href='game.html'" class="ruleBtn" id="startBtn-rule">start</button>
+    <br>
+    <button onclick="self.location.href='index.html'" class="ruleBtn" id="menuBtn-rule">homepage</button>
+
+    <div id="rule">
+      <br><br>
+      <div id="rulesTitle"> Rules </div> <br>
+      <div id="rulesContent">
+        首先輸入要遊玩的回合數 <br><br>
+        遊戲開始後，各回合會出現兩個物品 <br>
+        if (其中一個是正常顏色) <br>
+        Ans = 正常顏色的那個物品 <br>
+        else if (兩個都不是正常顏色) <br>
+        Ans = 沒出現的顏色+沒出現的物品 <br>
+        可用滑鼠<!--或者鍵盤(A.S.D.F.G)-->遊玩<br><br>
+        以下是物品的「正常」顏色
+      </div>
+      <div id="item-container2">
+        <img class="item" src="images/book/book_blue.png">
+        <img class="item" src="images/bottle/bottle_green.png">
+        <img class="item" src="images/ghost/ghost_white.png">
+        <img class="item" src="images/mouse/mouse_grey.png">
+        <img class="item" src="images/sofa/sofa_red.png">
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,93 +1,91 @@
-let ob1n = 0;
-let co1n = 0;
-let ob2n = 0;
-let co2n = 0;
-let Ans = 0;
+let object = ['0', "book", "bottle", "ghost", "mouse", "sofa"];
+let color = ['0', "blue", "green", "white", "grey", "red"];
 
-let card = 0;
-let right = 0;
-let wrong = 0;
+// ob:物品 co:顏色
+let ob1, co1, ob2, co2;
+let Ans;
 
+let card, cardNow;
+let right, wrong;
+
+hideImg("item-container");
+
+rules.addEventListener("click", showImg("item-container"));
+
+// 顯示圖
+function showImg(id) {
+  let img = document.getElementById(id);
+  img.style.display = "block";
+}
+// 隱藏圖
+function hideImg(id) {
+  let img = document.getElementById(id);
+  img.style.display = "none";
+}
+// 圖片張數
 function cardNumber() {
-  card = cardInput.value;
+  // 歸零
+  cardNow = 0;
+  right = 0, wrong = 0;
+
+  card = Number(cardInput.value);
+  // typeof cardInput.value = string
+  // console.log(typeof card);      number
+  // console.log(typeof cardNum);   number
+
+  showImg("item-container");
   changeImage();
 }
 
-function first() { // 選第一張圖
-  // ob:物品 co:顏色
-  ob1n = getRandomInt(1, 6);
-  co1n = getRandomInt(1, 6);
-  let ob1 = object(ob1n);
-  let co1 = color(co1n);
-  let p1 = "images/" + ob1 + "/" + ob1 + "_" + co1 + ".png";
+// 隨機圖
+
+// 選第一張圖
+function first() {
+
+  ob1 = getRandomInt(1, 6);
+  co1 = getRandomInt(1, 6);
+
+  let p1 = "images/" + object[ob1] + "/" + object[ob1] + "_" + color[co1] + ".png";
   return p1;
 }
+// 選第二張圖
+function second() {
 
-function second() { // 選第二張圖
+  ob2 = getRandomInt(1, 6);
+  co2 = getRandomInt(1, 6);
 
-  ob2n = getRandomInt(1, 6);
-  co2n = getRandomInt(1, 6);
+  if (ob1 === co1) {
+    // 記錄答案
+    Ans = ob1;
 
-  if (ob1n === co1n) {
-    while (ob2n === co2n || ob2n === ob1n || co2n === ob1n) {  // ans:ob1+co1
-      ob2n = getRandomInt(1, 6);
-      co2n = getRandomInt(1, 6);
+    // ans: ob1+co1
+    while (ob2 === co2 || ob2 === ob1 || co2 === co1 || co2 === ob1) {
+      ob2 = getRandomInt(1, 6);
+      co2 = getRandomInt(1, 6);
     }
-
-    Ans = ob1n;
   }
-  else if (ob1n !== co1n) {  // ans:物品＆顏色都沒出現的
-    while (ob2n === ob1n || ob2n === co1n || co2n === ob1n || co2n === co1n) {
-      ob2n = getRandomInt(1, 6);
-      co2n = getRandomInt(1, 6);
+  // ans: 物品＆顏色都沒出現的
+  else if (ob1 !== co1) {
+
+    while (ob2 === ob1 || ob2 === co1 || co2 === ob1 || co2 === co1) {
+      ob2 = getRandomInt(1, 6);
+      co2 = getRandomInt(1, 6);
     }
 
-    if (ob2n === co2n) {
-      Ans = ob2n;
+    // 記錄答案
+    if (ob2 === co2) {
+      Ans = ob2;
     }
     else {
-      Ans = 15 - ob1n - co1n - ob2n - co2n;
+      Ans = 15 - ob1 - co1 - ob2 - co2;
     }
   }
 
-  let ob2 = object(ob2n);
-  let co2 = color(co2n);
-
-  let p2 = "images/" + ob2 + "/" + ob2 + "_" + co2 + ".png";
+  let p2 = "images/" + object[ob2] + "/" + object[ob2] + "_" + color[co2] + ".png";
   return p2;
 }
 
-function object(ob) { // 物品
-  if (ob === 1)
-    return "book";
-  else if (ob === 2)
-    return "bottle";
-  else if (ob === 3)
-    return "ghost";
-  else if (ob === 4)
-    return "mouse";
-  else if (ob === 5)
-    return "sofa";
-  else
-    return 0;
-}
-
-function color(co) { // 物品
-  if (co === 1)
-    return "blue";
-  else if (co === 2)
-    return "green";
-  else if (co === 3)
-    return "white";
-  else if (co === 4)
-    return "grey";
-  else if (co === 5)
-    return "red";
-  else
-    return 0;
-}
-
-// 難度（在一隨機時間內選擇正確答案）
+// 切換難度
 function changeMode(mode) {
   switch (mode) {
     // peaceful
@@ -102,7 +100,7 @@ function changeMode(mode) {
     // hard
     case 'h':
       break;
-    // hell
+    // hell 挑戰人類極限(x
     case 'hell':
       break;
   }
@@ -110,38 +108,35 @@ function changeMode(mode) {
 
 // 判定答案
 function checkAns(ans) {
+  let str;
 
   if (ans === Ans) {
-    Ans = object(Ans);
-    let str = "Good! Ans is " + Ans;
-    const x = document.createElement("div");
-    x.textContent = str;
-    document.body.appendChild(x);
+    str = "Good! The answer is " + object[Ans];
     right = right + 1;
   }
   else {
-    Ans = object(Ans);
-    let str = "HAHA! Ans is " + Ans;
-    const x = document.createElement("div");
-    x.textContent = str;
-    document.body.appendChild(x);
+    str = "HAHA! The answer is " + object[Ans];
     wrong = wrong + 1;
   }
 
-  changeImage();
+  cardNow = cardNow + 1;
+  console.log(typeof cardNow);
+  console.log(typeof card);
 
-  return;
+  var ans = document.getElementById("ans");
+  ans.innerHTML = str;
+
+  changeImage();
 }
 
-// 換圖片
+// 換圖
 function changeImage() {
+  // 清空圖
+  const imageContainer = document.getElementById("card-container");
+  imageContainer.innerHTML = "";
 
-  if (card > 0){
-    // 清空圖片
-    const imageContainer = document.getElementById("card-container");
-    imageContainer.innerHTML = "";
-
-    // 隨機圖片
+  if (cardNow !== card) {
+    // 隨機圖
     for (let i = 0; i < 2; i++) {
       const img = document.createElement("img");
 
@@ -149,25 +144,58 @@ function changeImage() {
       else if (i === 1) img.src = second();
 
       img.alt = "Image " + (i + 1);
-      imageContainer.appendChild(img);}
-    card = card - 1;
+      imageContainer.appendChild(img);
+    }
   }
-  else {
-    let str = "score:" + right + "/" + (right+wrong);
-    const x = document.createElement("div");
-    x.textContent = str;
-    document.body.appendChild(x);
+  else if (cardNow === card)
+  {
+    // 隱藏圖片
+    hideImg("item-container");
+    //清空答案欄
+    var ans = document.getElementById("ans");
+    ans.innerHTML = " ";
   }
 
-  return;
+    // 算分數
+    let endScore = "score: " + right + "/" + card;
+    var score = document.getElementById("score");
+    score.innerHTML = endScore;
 }
 
-document.getElementById("btn").addEventListener("click", changeImage());
-
-//random
+// 隨機取數(random)
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min) + min);
 }
-//https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+// https://developer.mozilla.org/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
+// 鍵盤點擊
+let body = document.body;
+body.addEventListener('keydown', key(), false) // 偵測按下按鍵的行為
+
+function key(e) {
+  if (cardNow !== card) {
+    console.log(e.keyCode);
+    switch (e.keyCode) {
+      case 65:  // a
+        checkAns(1);
+        break;
+      case 83:  // s
+        checkAns(2);
+        break;
+      case 68:  // d
+        checkAns(3);
+        break;
+      case 70:  // f
+        checkAns(4);
+        break;
+      case 71:  // g
+        checkAns(5);
+        break;
+    }
+  }
+  else if (cardNow === card) {
+    return;
+  }
+}

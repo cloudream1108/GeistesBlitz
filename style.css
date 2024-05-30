@@ -4,21 +4,221 @@ html {
 }
 
 body {
-  font-size: 50%;
+  font-size: 80%;
+  color: silver;
 }
 
 .game-container {
   display: flex;
 }
 
+@font-face {
+  font-family: 'Protest Revolution';
+  src: url('font/ProtestRevolution-Regular.woff') format("woff");
+  /* https://fonts.google.com/specimen/Protest+Revolution?preview.text=GeistesBlitz */
+}
+
+@font-face {
+  font-family: 'New_Tegomin';
+  src: url('font/NewTegomin-Regular.woff') format("woff");
+  /* https://fonts.google.com/specimen/New+Tegomin?subset=japanese&noto.script=Hira */
+}
+
+#title {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* 物件基準點設為中心 */
+  font-size: 7vw;
+  font-family: 'Protest Revolution';
+}
+
 #ghost_w {
-  width: 10%;
+  width: 8%;
+  /*height: 8%;*/
+  opacity: 80%;
+
+  position: absolute;
+  top: 31%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+}
+
+.backgroundImg {
+  background-blend-mode: multiply;
+  background-image: url(images/castle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.menuBtn { /* 首頁按鈕 */
+  width: 9vw;
+  height: 5vw;
+  border-radius: 2vw;
+  font-size: 2vw;
+  font-family: 'Protest Revolution';
+  color: grey;
+  text-align: center;
+  opacity: 80%;
+}
+
+#startBtn-menu {
+  /* 首頁start按鈕 */
+  position: absolute;
+  top: 55%;
+  left: 57.5%;
+  transform: translate(-50%, -50%);
+}
+
+#rulesBtn-menu {
+  /* 首頁rules按鈕 */
+  position: absolute;
+  top: 55%;
+  left: 42.5%;
+  transform: translate(-50%, -50%);
+}
+
+#rulesTitle {
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 7vw;
+  font-family: 'Protest Revolution';
+}
+
+#rulesContent {
+  position: absolute;
+  top: 20.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 1.5vw;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(41, 36, 33, 0.4);
+  padding: 15px;
+  border-radius: 12px;
+  font-family: 'New_Tegomin';
+}
+
+.ruleBtn { /* 規則頁按鈕 */
+  width: 7vw;
+  height: 3.9vw;
+  border-radius: 1.56vw;
+  font-family: 'Protest Revolution';
+  color: grey;
+  text-align: center;
+  opacity: 55%;
+}
+
+#startBtn-rule {
+  /* 規則頁start按鈕 */
+  position: absolute;
+  top: 23%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  font-size: 1.56vw;
+}
+
+#menuBtn-rule {
+  /* 規則頁homepage按鈕 */
+  position: absolute;
+  top: 13%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2vw;
+}
+
+#cardNum {
+  /* 「回合數」 */
+  position: absolute;
+  top: 7.5%;
+  left: 8.5%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5vw;
+  font-family: 'New_Tegomin';
+  text-align: center;
+}
+
+#cardInput {
+  /* 輸入框 */
+  position: absolute;
+  top: 7.5%;
+  left: 15.5%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2vw;
+  border-radius: 0.8vw;
+  font-family: 'New_Tegomin';
+  text-align: center;
+}
+
+#submit {
+  /* submit按鈕 */
+  position: absolute;
+  top: 7.5%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2vw;
+  border-radius: 0.8vw;
+  font-family: 'Protest Revolution';
+  text-align: center;
+  color: grey;
+}
+
+.gameBtn { /* 遊戲頁按鈕 */
+  width: 7vw;
+  height: 3.9vw;
+  border-radius: 1.56vw;
+  font-family: 'Protest Revolution';
+  color: grey;
+  text-align: center;
+  opacity: 55%;
+}
+
+#menuBtn-game {
+  /* 遊戲頁homepage按鈕 */
+  position: absolute;
+  top: 18%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2vw;
+}
+
+#ruleBtn-game {
+  /* 遊戲頁rule按鈕 */
+  position: absolute;
+  top: 27%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  font-size: 1.56vw;
+}
+
+#ans {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8vw;
+  font-family: 'New_Tegomin';
+  text-align: center;
+}
+
+#score {
+  position: absolute;
+  top: 9%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8vw;
+  font-family: 'Protest Revolution';
+  text-align: center;
 }
 
 .item {
-  position: relative;  
+  position: relative;
   height: 10vw;
 }
+
 .card {
   height: 2vw;
   width: 6vw;
@@ -29,11 +229,17 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  position: fixed;
+  top: 15%;
+  left: 30%;
 }
 
 #card-container img {
-  max-width: 200px;
-  max-height: 200px;
+  max-width: 20vw;
+  max-height: 20vw;
+  /*max-width: 200px;
+  max-height: 200px;*/
+  opacity: 90%;
 }
 
 #item-container {
@@ -41,19 +247,33 @@ body {
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 10px;
+  position: fixed;
+  top: 55%;
+  left: 25%;
 }
 
 #item-container img {
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 10vw;
+  max-height: 10vw;
+  /*max-width: 150px;
+  max-height: 150px;*/
+  opacity: 80%;
 }
 
-.left {
-  flex: 1;
-  /* 佔據剩餘空間 */
+#item-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  position: fixed;
+  top: 70%;
+  left: 25%;
 }
 
-.right {
-  flex: 3;
-  /* 佔據剩餘空間的三倍 */
+#item-container2 img {
+  max-width: 10vw;
+  max-height: 10vw;
+  /*max-width: 150px;
+  max-height: 150px;*/
+  opacity: 80%;
 }
