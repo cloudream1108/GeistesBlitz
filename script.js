@@ -45,7 +45,7 @@ function first() {
   ob1 = getRandomInt(1, 6);
   co1 = getRandomInt(1, 6);
 
-  let p1 = "images/" + object[ob1] + "/" + object[ob1] + "_" + color[co1] + ".png";
+  let p1 = "picture/" + object[ob1] + "/" + object[ob1] + "_" + color[co1] + ".png";
   return p1;
 }
 // 選第二張圖
@@ -81,7 +81,7 @@ function second() {
     }
   }
 
-  let p2 = "images/" + object[ob2] + "/" + object[ob2] + "_" + color[co2] + ".png";
+  let p2 = "picture/" + object[ob2] + "/" + object[ob2] + "_" + color[co2] + ".png";
   return p2;
 }
 

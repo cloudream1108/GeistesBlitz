@@ -47,7 +47,7 @@ body {
 
 .backgroundImg {
   background-blend-mode: multiply;
-  background-image: url(images/castle.jpg);
+  background-image: url(picture/castle.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -285,18 +285,35 @@ body {
 /*響應式設計語法*/
 @media screen and (max-width: 768px) {
   .backgroundImg {
-    background-image: url(images/castlePhone.jpg);
+    background-image: url(picture/castlePhone.jpg);
   }
+
   #title {
-    position: absolute;
     top: 30%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-    /* 物件基準點設為中心 */
-    font-size: 20vw;
-    font-family: 'Protest Revolution';
+    font-size: 17vw;
   }
+
   #ghost_w {
     display: none;
+  }
+
+  .menuBtn {
+    /* 首頁按鈕 */
+    width: 20vw;
+    height: 8vw;
+    border-radius: 2vw;
+    font-size: 5vw;
+  }
+
+  #startBtn-menu {
+    /* 首頁start按鈕 */
+    top: 70%;
+    left: 70%;
+  }
+
+  #rulesBtn-menu {
+    /* 首頁rules按鈕 */
+    top: 70%;
+    left: 30%;
   }
 }
