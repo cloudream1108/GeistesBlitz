@@ -282,7 +282,9 @@ body {
   opacity: 80%;
 }
 
-/*響應式設計語法
+/*響應式設計語法*/
 @media screen and (max-width: 768px) {
-  
-}*/
+  .backgroundImg {
+    background-image: url(images/castlePhone.jpg);
+  }
+}
