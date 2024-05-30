@@ -288,7 +288,12 @@ body {
     background-image: url(images/castlePhone.jpg);
   }
   #title {
-    top: 30vh;
-    font-size: 10vw;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    /* 物件基準點設為中心 */
+    font-size: 20vw;
+    font-family: 'Protest Revolution';
   }
 }
