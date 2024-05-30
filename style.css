@@ -287,4 +287,9 @@ body {
   .backgroundImg {
     background-image: url(images/castlePhone.jpg);
   }
+  #title {
+    top: 30%;
+    left: 20%;
+    font-size: 10vw;
+  }
 }
