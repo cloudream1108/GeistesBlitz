@@ -333,7 +333,7 @@ body {
     justify-content: center;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 90vh;
+    top: 85vh;
     left: 50%;
   }
 
@@ -352,7 +352,7 @@ body {
 
   #startBtn-rule {
     /* 規則頁start按鈕 */
-    top: 11%;
+    top: 12%;
     left: 10%;
     font-size: 3vw;
     text-align: center;
@@ -412,7 +412,7 @@ body {
 
   #ruleBtn-game {
     /* 遊戲頁rule按鈕 */
-    top: 11%;
+    top: 12%;
     left: 10%;
     font-size: 3vw;
     text-align: center;
