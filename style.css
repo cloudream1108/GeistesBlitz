@@ -288,8 +288,7 @@ body {
     background-image: url(images/castlePhone.jpg);
   }
   #title {
-    top: 30%;
-    left: 20%;
+    top: 30vh;
     font-size: 10vw;
   }
 }
