@@ -333,7 +333,7 @@ body {
     justify-content: center;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 90%;
+    top: 90vh;
     left: 50%;
   }
 
