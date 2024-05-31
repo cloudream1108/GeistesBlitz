@@ -101,7 +101,6 @@ body {
   font-family: 'New_Tegomin';
 }
 
-
 .ruleBtn {
   /* 規則頁按鈕 */
   width: 7vw;
@@ -144,6 +143,7 @@ body {
   opacity: 80%;
 }
 
+::-webkit-input-placeholder { color: transparent;}
 #cardNum {
   /* 「回合數」 */
   position: absolute;
@@ -344,12 +344,10 @@ body {
     text-align: center;
   }
 
+  ::-webkit-input-placeholder { color: grey;}
   #cardNum {
     /* 「回合數」 */
-    top: 10%;
-    left: 35vw;
-    font-size: 5vw;
-    text-align: center;
+    display: none;
   }
   #cardInput {
     /* 輸入框 */
@@ -359,6 +357,7 @@ body {
     width: 20vw;
     height: 4%;
     text-align: center;
+    
   }
   #submit {
     /* submit按鈕 */
