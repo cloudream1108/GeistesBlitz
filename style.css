@@ -347,16 +347,16 @@ body {
   #cardNum {
     /* 「回合數」 */
     top: 10%;
-    left: 35%;
+    left: 35vw;
     font-size: 5vw;
     text-align: center;
   }
   #cardInput {
     /* 輸入框 */
     top: 10%;
-    left: 55%;
+    left: 57vw;
     font-size: 4vw;
-    width: 25%;
+    width: 20vw;
     height: 4%;
     text-align: center;
   }
@@ -364,7 +364,7 @@ body {
     /* submit按鈕 */
     text-align: center;
     top: 10%;
-    left: 85%;
+    left: 85vw;
     font-size: 4vw;
     line-height: 4.5%;
     width: 17%;
