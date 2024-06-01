@@ -555,7 +555,7 @@ body {
     gap: 15px;
     position: absolute;
     transform: translate(-50%, -50%);
-    bottom: 0%;
+    top: 80%;
     left: 55%;
     width: 90%;
   }
