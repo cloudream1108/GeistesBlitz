@@ -164,8 +164,6 @@ body {
 #item-container-rule img {
   width: 10vw;
   height: 10vw;
-  /*max-width: 150px;
-  max-height: 150px;*/
   opacity: 80%;
 }
 
@@ -345,8 +343,8 @@ body {
 }
 
 
-/*響應式設計語法*/
-@media screen and (max-width: 800px) {
+/* 手機版 */
+@media screen and (max-width: 1000px) {
   .backgroundImg {
     background-image: url(picture/castlePhone.jpg);
   }
