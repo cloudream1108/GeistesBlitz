@@ -1,36 +1,29 @@
-/* 字體 */
 @font-face {
   font-family: 'Protest Revolution';
   src: url('font/ProtestRevolution-Regular.woff') format("woff");
   /* https://fonts.google.com/specimen/Protest+Revolution?preview.text=GeistesBlitz */
 }
+
 @font-face {
   font-family: 'New_Tegomin';
   src: url('font/NewTegomin-Regular.woff') format("woff");
   /* https://fonts.google.com/specimen/New+Tegomin?subset=japanese&noto.script=Hira */
 }
 
-
 html {
   height: 100%;
   width: 100%;
 }
+
 body {
   font-size: 80%;
   color: silver;
 }
+
 .game-container {
   display: flex;
 }
-.backgroundImg {
-  background-blend-mode: multiply;
-  background-image: url(picture/castle.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
 
-/* 標題 */
 #title {
   position: absolute;
   top: 25%;
@@ -40,7 +33,7 @@ body {
   font-size: 7vw;
   font-family: 'Protest Revolution';
 }
-/* 首頁-鬼 */
+
 #ghost_w {
   width: 8%;
   opacity: 80%;
@@ -51,33 +44,51 @@ body {
   transform: translate(-50%, -50%);
 }
 
+.backgroundImg {
+  background-blend-mode: multiply;
+  background-image: url(picture/castle.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 .menuBtn {
   /* 首頁按鈕 */
   width: 9vw;
   height: 5vw;
   border-radius: 2vw;
-  font-size: 2vw;
   font-family: 'Protest Revolution';
   color: grey;
   text-align: center;
   opacity: 80%;
 }
-#startBtn-menu {
-  /* 首頁start按鈕 */
+
+#startBtn1-menu {
+  /* 首頁single按鈕 */
   position: absolute;
   top: 55%;
-  left: 57.5%;
+  left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 1.5vw;
 }
+
+#startBtn2-menu {
+  /* 首頁two按鈕 */
+  position: absolute;
+  top: 55%;
+  left: 61.3%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5vw;
+}
+
 #rulesBtn-menu {
   /* 首頁rules按鈕 */
   position: absolute;
   top: 55%;
-  left: 42.5%;
+  left: 38.7%;
   transform: translate(-50%, -50%);
+  font-size: 2vw;
 }
-
 
 #rulesTitle {
   position: absolute;
@@ -87,6 +98,7 @@ body {
   font-size: 7vw;
   font-family: 'Protest Revolution';
 }
+
 #rulesContent {
   position: absolute;
   top: 20.5%;
@@ -111,18 +123,29 @@ body {
   text-align: center;
   opacity: 55%;
 }
-#startBtn-rule {
-  /* 規則頁start按鈕 */
-  position: absolute;
-  top: 23%;
-  left: 8%;
-  transform: translate(-50%, -50%);
-  font-size: 1.56vw;
-}
+
 #menuBtn-rule {
   /* 規則頁homepage按鈕 */
   position: absolute;
   top: 13%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2vw;
+}
+
+#startBtn1-rule {
+  /* 規則頁single按鈕 */
+  position: absolute;
+  top: 22%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2vw;
+}
+
+#startBtn2-rule {
+  /* 規則頁two(?按鈕 */
+  position: absolute;
+  top: 31%;
   left: 8%;
   transform: translate(-50%, -50%);
   font-size: 1.2vw;
@@ -137,13 +160,15 @@ body {
   top: 70%;
   left: 25%;
 }
+
 #item-container-rule img {
   width: 10vw;
   height: 10vw;
+  /*max-width: 150px;
+  max-height: 150px;*/
   opacity: 80%;
 }
 
-::-webkit-input-placeholder { color: transparent;}
 #cardNum {
   /* 「回合數」 */
   position: absolute;
@@ -154,6 +179,7 @@ body {
   font-family: 'New_Tegomin';
   text-align: center;
 }
+
 #cardInput {
   /* 輸入框 */
   position: absolute;
@@ -165,6 +191,7 @@ body {
   font-family: 'New_Tegomin';
   text-align: center;
 }
+
 #submit {
   /* submit按鈕 */
   position: absolute;
@@ -188,6 +215,7 @@ body {
   text-align: center;
   opacity: 55%;
 }
+
 #menuBtn-game {
   /* 遊戲頁homepage按鈕 */
   position: absolute;
@@ -196,39 +224,94 @@ body {
   transform: translate(-50%, -50%);
   font-size: 1.2vw;
 }
+
 #ruleBtn-game {
   /* 遊戲頁rule按鈕 */
   position: absolute;
-  top: 27%;
+  top: 26.5%;
   left: 10%;
   transform: translate(-50%, -50%);
   font-size: 1.56vw;
 }
 
+#single-game {
+  /* 雙人遊戲頁single按鈕 */
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2vw;
+}
+
+#two-game {
+  /* 單人遊戲頁two按鈕 */
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2vw;
+}
+
 #ans {
   position: absolute;
-  top: 90%;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 1.8vw;
   font-family: 'New_Tegomin';
   text-align: center;
 }
-#score {
-  position: absolute;
-  top: 9%;
-  left: 87%;
+
+.score {
   transform: translate(-50%, -50%);
   font-size: 1.8vw;
   font-family: 'Protest Revolution';
   text-align: center;
 }
 
+#scoreA {
+  position: absolute;
+  top: 9%;
+  left: 87%;
+}
+
+#scoreB {
+  position: absolute;
+  top: 13%;
+  left: 87%;
+}
+
+.finalScore {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.5vw;
+  font-family: 'Protest Revolution';
+  text-align: center;
+}
+
+#finalScore {
+  top: 50%;
+}
+
+#finalScoreA {
+  top: 45%;
+}
+
+#finalScoreB {
+  top: 55%;
+}
+
+.item {
+  position: relative;
+  height: 10vw;
+}
 
 .card {
   height: 2vw;
   width: 6vw;
 }
+
 #card-container {
   display: flex;
   flex-wrap: wrap;
@@ -238,33 +321,34 @@ body {
   top: 15%;
   left: 30%;
 }
+
 #card-container img {
   width: 20vw;
   height: 20vw;
   opacity: 90%;
 }
 
-.item {
-  position: relative;
-  height: 10vw;
-}
 #item-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 10px;
   position: fixed;
-  top: 60%;
+  top: 55%;
   left: 25%;
 }
+
 #item-container img {
   width: 10vw;
   height: 10vw;
   opacity: 80%;
 }
 
-/* 響應式設計語法 */
-@media screen and (max-width: 1000px) {
+
+/*******************************************************************/
+
+/*響應式設計語法*/
+@media screen and (max-width: 800px) {
   .backgroundImg {
     background-image: url(picture/castlePhone.jpg);
   }
@@ -273,6 +357,7 @@ body {
     top: 30%;
     font-size: 17vw;
   }
+
   #ghost_w {
     display: none;
   }
@@ -282,24 +367,31 @@ body {
     width: 30vw;
     height: 10vw;
     border-radius: 2vw;
-    font-size: 6vw;
   }
-  #startBtn-menu {
-    /* 首頁start按鈕 */
+
+  #startBtn1-menu {
+    /* 首頁single按鈕 */
     top: 65%;
     left: 50%;
-    text-align: center;
+    font-size: 4vw;
   }
+
+  #startBtn2-menu {
+    /* 首頁two按鈕 */
+    display: none;
+  }
+
   #rulesBtn-menu {
     /* 首頁rules按鈕 */
     top: 75%;
     left: 50%;
-    text-align: center;
+    font-size: 6vw;
   }
 
   #rulesTitle {
     font-size: 17vw;
   }
+
   #rulesContent {
     position: absolute;
     top: 25%;
@@ -307,6 +399,7 @@ body {
     width: 75%;
     padding: 10px;
   }
+
   #item-container-rule {
     width: 90%;
     display: flex;
@@ -314,9 +407,10 @@ body {
     justify-content: center;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 80vh;
+    top: 75%;
     left: 50%;
   }
+
   #item-container-rule img {
     width: 17%;
     height: 17%;
@@ -324,72 +418,80 @@ body {
 
   .ruleBtn {
     /* 規則頁按鈕 */
-    width: 17vw;
-    height: 5vh;
+    width: 15vw;
+    height: 7vw;
     text-align: center;
     opacity: 55%;
   }
-  #startBtn-rule {
-    /* 規則頁start按鈕 */
-    top: 12%;
+
+  #startBtn1-rule {
+    /* 規則頁single按鈕 */
+    top: 11%;
     left: 10%;
-    font-size: 3vw;
-    text-align: center;
+    font-size: 2.5vw;
   }
+
+  #startBtn2-rule {
+    /* 規則頁two(?按鈕 */
+    display: none;
+  }
+
   #menuBtn-rule {
     /* 規則頁homepage按鈕 */
     top: 5%;
     left: 10%;
     font-size: 2.7vw;
-    text-align: center;
   }
 
-  ::-webkit-input-placeholder { color: grey;}
   #cardNum {
     /* 「回合數」 */
-    display: none;
+    top: 10%;
+    left: 30%;
+    font-size: 5vw;
   }
+
   #cardInput {
     /* 輸入框 */
     top: 10%;
-    left: 57vw;
+    left: 55%;
     font-size: 4vw;
-    width: 20vw;
+    width: 25%;
     height: 4%;
-    text-align: center;
-    
   }
+
   #submit {
     /* submit按鈕 */
-    text-align: center;
     top: 10%;
-    left: 85vw;
+    left: 80%;
     font-size: 4vw;
-    line-height: 4.5%;
-    width: 17%;
+    width: 16%;
     height: 4.5%;
     border-radius: 1.5vw;
   }
 
   .gameBtn {
     /* 遊戲頁按鈕 */
-    width: 17vw;
-    height: 5vh;
-    text-align: center;
+    width: 15vw;
+    height: 7vw;
   }
+
   #menuBtn-game {
     /* 遊戲頁homepage按鈕 */
     top: 5%;
     left: 10%;
     font-size: 2.7vw;
-    text-align: center;
   }
+
   #ruleBtn-game {
     /* 遊戲頁rule按鈕 */
-    top: 12%;
+    top: 11%;
     left: 10%;
     font-size: 3vw;
-    text-align: center;
+  }
+
+  #two-game {
+    /* 單人遊戲頁two按鈕 */
+    display: none;
   }
 
   #ans {
@@ -402,17 +504,35 @@ body {
     text-align: center;
     width: 90%;
   }
-  #score {
+
+  #scoreA {
     top: 90%;
     left: 80%;
     font-size: 5vw;
     width: 50%;
   }
 
+  #finalScore {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8vw;
+    font-family: 'Protest Revolution';
+    text-align: center;
+    /* width? */
+  }
+
+  .item {
+    position: relative;
+    height: 15vw;
+  }
+
   .card {
     height: 6vw;
     width: 18vw;
   }
+
   #card-container {
     display: flex;
     flex-wrap: wrap;
@@ -424,26 +544,24 @@ body {
     left: 50%;
     width: 90%;
   }
+
   #card-container img {
     width: 35vw;
     height: 35vw;
     opacity: 90%;
   }
 
-  .item {
-    position: relative;
-    height: 35vw;
-  }
   #item-container {
     display: flex;
     justify-content: center;
     gap: 15px;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 65%;
+    bottom: 0%;
     left: 55%;
     width: 90%;
   }
+
   #item-container img {
     width: 15vw;
     height: 15vw;

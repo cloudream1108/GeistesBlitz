@@ -14,7 +14,8 @@
   <div class="game-container">
     <br>
 
-    <button onclick="self.location.href='game.html'" class="ruleBtn" id="startBtn-rule">start</button>
+    <button onclick="self.location.href='game_1.html'" class="ruleBtn" id="startBtn1-rule">single-player</button>
+    <button onclick="self.location.href='game_2.html'" class="ruleBtn" id="startBtn2-rule">two-player</button>
     <br>
     <button onclick="self.location.href='index.html'" class="ruleBtn" id="menuBtn-rule">homepage</button>
 
@@ -22,13 +23,15 @@
       <br><br>
       <div id="rulesTitle"> Rules </div> <br>
       <div id="rulesContent">
-        首先輸入要遊玩的回合數 <br><br>
+        首先輸入要遊玩的回合數 <br>
         遊戲開始後，各回合會出現兩個物品 <br>
         if (其中一個是正常顏色) <br>
         Ans = 正常顏色的那個物品 <br>
         else if (兩個都不是正常顏色) <br>
         Ans = 沒出現的顏色+沒出現的物品 <br>
-        可用滑鼠<!--或者鍵盤(A.S.D.F.G)-->遊玩<br><br>
+        可用滑鼠或鍵盤(A.S.D.F.G)遊玩<br>
+        雙人遊玩請使用鍵盤(A～G & H～;)<br>
+        雙人版兩人都送出答案後才會進入下一題 <br><br>
         以下是物品的「正常」顏色
       </div>
       <div id="item-container-rule">
@@ -42,7 +45,7 @@
 
   </div>
 
-  <script src="script.js"></script>
+  <script src="script_2.js"></script>
 </body>
 
 </html>

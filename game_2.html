@@ -14,31 +14,36 @@
   <div class="game-container">
     <!-- 回合數 -->
     <div id="cardNum"> 回合數 </div>
-    <input type="number" class="card" id="cardInput" placeholder="回合數"></input>
+    <input type="number" class="card" id="cardInput"></input>
     <button class="card" id="submit" onclick="cardNumber()"> submit </button>
 
     <!-- 按鈕 -->
     <button onclick="self.location.href='index.html'" class="gameBtn" id="menuBtn-game">homepage</button>
-    <br>
+
     <button onclick="self.location.href='rule.html'" class="gameBtn" id="ruleBtn-game">rules</button>
+
+    <button onclick="self.location.href='game_1.html'" class="gameBtn" id="single-game">single-player</button>
 
     <!-- 答案 & 分數 -->
     <div id="ans"></div>
-    <div id="score"></div>
+    <div id="scoreA" class="score"></div>
+    <div id="scoreB" class="score"></div>
+    <div id="finalScoreA" class="finalScore"></div>
+    <div id="finalScoreB" class="finalScore"></div>
 
     <div id="card-container"></div>
 
     <div id="item-container">
-      <img class="item" id="book" src="picture/book/book_blue.png" onclick="checkAns(1)">
-      <img class="item" id="bottle" src="picture/bottle/bottle_green.png" onclick="checkAns(2)">
-      <img class="item" id="ghost" src="picture/ghost/ghost_white.png" onclick="checkAns(3)">
-      <img class="item" id="mous" src="picture/mouse/mouse_grey.png" onclick="checkAns(4)">
-      <img class="item" id="sofa" src="picture/sofa/sofa_red.png" onclick="checkAns(5)">
+      <img class="item" id="book" src="picture/book/book_blue.png" onclick="checkAns(1, 1)">
+      <img class="item" id="bottle" src="picture/bottle/bottle_green.png" onclick="checkAns(2, 1)">
+      <img class="item" id="ghost" src="picture/ghost/ghost_white.png" onclick="checkAns(3, 1)">
+      <img class="item" id="mous" src="picture/mouse/mouse_grey.png" onclick="checkAns(4, 1)">
+      <img class="item" id="sofa" src="picture/sofa/sofa_red.png" onclick="checkAns(5, 1)">
     </div>
 
   </div>
 
-  <script src="script.js"></script>
+  <script src="script_2.js"></script>
 </body>
 
 </html>
