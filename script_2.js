@@ -178,19 +178,20 @@ function changeImage() {
   // 算分數
   let AendScore = "scoreA: " + A[2] + "/" + cardNow;
   let BendScore = "scoreB: " + B[2] + "/" + cardNow;
-    if (cardNow != card) {
-      scoreA.innerHTML = AendScore;
-      scoreB.innerHTML = BendScore;
-    }
-    else if (cardNow == card) {
-      scoreA.innerHTML = " ";
-      scoreB.innerHTML = " ";
-      finalScoreA.innerHTML = AendScore;
-      finalScoreB.innerHTML = BendScore;
-    }
+  if (cardNow != card) {
+    scoreA.innerHTML = AendScore;
+    scoreB.innerHTML = BendScore;
+  }
+  else if (cardNow == card) {
+    scoreA.innerHTML = " ";
+    scoreB.innerHTML = " ";
+    finalScoreA.innerHTML = AendScore;
+    finalScoreB.innerHTML = BendScore;
+  }
 
   A[0] = false; A[1] = false;
   B[0] = false; B[1] = false;
+  First = 0;
 }
 
 // 隨機取數(random)
@@ -208,34 +209,11 @@ function key(e) {
   if (cardNow != card) {
     console.log(e.keyCode);
     switch (e.keyCode) {
+      // book
       case 65:
         if (!A[0]) {
           A[0] = true;
           checkAns(1, 1);
-        }
-        break;
-      case 83:
-        if (!A[0]) {
-          A[0] = true;
-          checkAns(2, 1);
-        }
-        break;
-      case 68:
-        if (!A[0]) {
-          A[0] = true;
-          checkAns(3, 1);
-        }
-        break;
-      case 70:
-        if (!A[0]) {
-          A[0] = true;
-          checkAns(4, 1);
-        }
-        break;
-      case 71:
-        if (!A[0]) {
-          A[0] = true;
-          checkAns(5, 1);
         }
         break;
       case 72:
@@ -244,10 +222,24 @@ function key(e) {
           checkAns(1, 2);
         }
         break;
+      // bottle
+      case 83:
+        if (!A[0]) {
+          A[0] = true;
+          checkAns(2, 1);
+        }
+        break;
       case 74:
         if (!B[0]) {
           B[0] = true;
           checkAns(2, 2);
+        }
+        break;
+      // ghost
+      case 68:
+        if (!A[0]) {
+          A[0] = true;
+          checkAns(3, 1);
         }
         break;
       case 75:
@@ -256,10 +248,24 @@ function key(e) {
           checkAns(3, 2);
         }
         break;
+      // mouse
+      case 70:
+        if (!A[0]) {
+          A[0] = true;
+          checkAns(4, 1);
+        }
+        break;
       case 76:
         if (!B[0]) {
           B[0] = true;
           checkAns(4, 2);
+        }
+        break;
+      // sofa
+      case 71:
+        if (!A[0]) {
+          A[0] = true;
+          checkAns(5, 1);
         }
         break;
       case 186:
